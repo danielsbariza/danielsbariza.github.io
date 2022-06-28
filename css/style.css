@@ -1,0 +1,99 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --negro: #000000;
+    --rojo: #700000;
+    --azul: #009090;
+    --gris: #707070;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* ---------BARRA DE NAVEGACION-------- */
+
+#header {
+    position: fixed;
+    background-color: var(--oscuro);
+    width: 100%;
+    box-shadow: 0px 0px 5px 5px;
+}
+#nav-bar {
+    margin-right: 50px;
+
+    display: flex;
+    justify-content: end;
+    
+}
+.nav-selec:hover {
+    background-color: var(--gris);
+    color: var(--negro);
+}
+.nav-selec {
+    text-align: center;
+    font-size: 20px;
+    width: 90px;
+    padding: 30px;
+    transition: background-color .5s;
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+/* ---------INICIO Y PRESENTACION-------- */
+
+#inicio {
+    background-color: var(--azul);
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#desc {
+    color: var(--blanco);
+    margin: 0px 30px 0px 30px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.desc-nombre {
+    min-width: 250px;
+    width: 250px;
+}
+
+.desc-texto {
+    max-width: 450px;
+    padding-left: 20px;
+    border-left: var(--blanco) 2px solid;
+}
+
+/* ---------PROYECTOS-------- */
+
+#proyectos {
+    background-color: var(--oscuro);
+    height: 100vh;
+    box-shadow: 0px 0px 5px 5px;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+/* ---------PROYECTOS-------- */
+#contacto {
+    position: relative;
+    z-index: -1;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
