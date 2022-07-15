@@ -4,24 +4,59 @@
     --negro: #000000;
     --rojo: #700000;
     --azul: #009090;
+    --trans-oscuro: rgba(33, 33, 33, 0.6);
+    --trans-azul: rgba(0, 100, 100, 0.89); 
     --gris: #707070;
+    --fuente: 'Raleway', sans-serif
 }
 
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--fuente);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+a {
+    text-decoration: none;
+}
+h1,h2,h3,h4 {
+    font-family: var(--fuente);
+    margin: 1rem 0;
+}
+img {
+    max-width: 100%;
+}
+hr {
+    margin: 2rem 0;
+}
+
+
+.container {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
 }
 
 /* ---------BARRA DE NAVEGACION-------- */
-
 #header {
     position: fixed;
-    background-color: var(--oscuro);
+    background-color: var(--trans-oscuro);
     width: 100%;
-    box-shadow: 0px 0px 5px 5px;
+    box-shadow: 0 0 0.5rem 0.5rem;
 }
-#nav-bar {
-    margin-right: 50px;
+#header:hover {
+    background-color: var(--oscuro);
+}
 
+#nav-bar {
+    margin-right: 5rem;
     display: flex;
     justify-content: end;
     
@@ -32,9 +67,7 @@ body {
 }
 .nav-selec {
     text-align: center;
-    font-size: 20px;
-    width: 90px;
-    padding: 30px;
+    padding: 2rem;
     transition: background-color .5s;
     text-decoration: none;
     color: var(--blanco);
@@ -42,49 +75,63 @@ body {
 
 /* ---------INICIO Y PRESENTACION-------- */
 
-#inicio {
-    background-color: var(--azul);
+#about {
     height: 100vh;
-
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.bg-about {
+    background: var(--trans-azul) url(../images/bg-about.webp);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-blend-mode: darken;
+}
 #desc {
     color: var(--blanco);
-    margin: 0px 30px 0px 30px;
-
+    margin: 0 3rem;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .desc-nombre {
-    min-width: 250px;
-    width: 250px;
+    min-width: 25rem;
+    width: 25rem;
 }
 
 .desc-texto {
-    max-width: 450px;
-    padding-left: 20px;
-    border-left: var(--blanco) 2px solid;
+    max-width: 45rem;
+    padding-left: 2rem;
+    border-left: var(--blanco) 0.2rem solid;
 }
 
 /* ---------PROYECTOS-------- */
 
-#proyectos {
+#projects {
     background-color: var(--oscuro);
     height: 100vh;
-    box-shadow: 0px 0px 5px 5px;
-
+    box-shadow: 0 0 0.5rem 0.5rem;
+    
+}
+#projects-grid {
     display: grid;
     justify-items: center;
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
-    
 }
-
+.project {
+    background: url("../images/img-project.webp");
+    background-repeat: no-repeat;
+    background-size:auto;
+    padding: 5rem 5rem;
+    margin: 1rem 1rem;
+}
+.radius-border {
+    border-radius: 0.5rem;
+}
 /* ---------PROYECTOS-------- */
-#contacto {
+#contact {
     position: relative;
     z-index: -1;
     background-color: var(--rojo);
