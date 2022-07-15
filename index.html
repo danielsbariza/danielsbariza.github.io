@@ -8,53 +8,91 @@
     <link rel="stylesheet" href="css/style.css">
 
     
+    
     <title>Portafolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    
+    
 </head>
 <body>
+
+    <script src="./icons.js">
+        jQuery(document).ready(function($){
+            $(".icon").attr(
+                "stroke", "#000000"
+            );
+});
+    </script>
+
     <header id="header">
-        <nav id="nav-bar">
-            <a href="#inicio" class="nav-selec">Inicio</a>
-            <a href="#proyectos" class="nav-selec">Proyectos</a>
-            <a href="#contacto" class="nav-selec">Contacto</a>
-        </nav>
-    </header>
-    <section id="inicio">
-        <div id="desc">
-            <div class="desc-nombre" >
-                <h1>Mi nombre es <strong>Daniel Barrera</strong></h1>
-            </div>
-            <div class="desc-texto">
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, voluptatibus recusandae rerum minus nulla repellat, excepturi sed non voluptatem cupiditate eveniet veniam quidem officiis dolores ea nisi error minima. Eligendi.
-                </p>
-            </div>
-        </div>
-    </section>
-    <section id="proyectos">
-        <div class="desc-nombre" >
-            <h1>Proyecto1</h1>
-        </div>
-        <div class="desc-nombre" >
-            <h1>Proyecto2</h1>
-        </div>
-        <div class="desc-nombre" >
-            <h1>Proyecto3</h1>
-        </div>
-        <div class="desc-nombre" >
-            <h1>Proyecto4</h1>
-        </div>
-    </section>
-    <section id="contacto">
         <div>
+            <nav id="nav-bar">
+                <a href="#about" class="nav-selec">Inicio</a>
+                <a href="#projects" class="nav-selec">Proyectos</a>
+                <a href="#contact" class="nav-selec">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="bg-about">
+        <div class="container bg-transparency">
+            <div id="desc">
+                <div class="desc-nombre" >
+                    <h1>Mi nombre es <strong>Daniel Barrera</strong></h1>
+                </div>
+                <div class="desc-texto">
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, aliquam eveniet? Nemo quis dolor aut delectus facilis iure incidunt sapiente iste tenetur tempore. Id optio ipsam ad voluptatum ipsum corporis?
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div id="projects-grid">
+                <div class="project radius-border">
+                    <h2>Proyecto1</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, accusantium.</p>
+                    <img src="./icons/ico-html.svg">
+                    <img src="./icons/ico-js.svg">
+                </div>
+                <div class="project radius-border">
+                    <h2>Proyecto2</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, accusantium.</p>
+                    <img src="./icons/ico-html.svg">
+                    <img src="./icons/ico-js.svg">
+                </div>
+                <div class="project radius-border">
+                    <h2>Proyecto3</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, accusantium.</p>
+                    <img src="./icons/ico-html.svg">
+                    <img src="./icons/ico-js.svg">
+                    
+                </div>
+                <div class="project radius-border">
+                    <h2>Proyecto4</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, accusantium.</p>
+                    <img src="./icons/ico-html.svg">
+                    <img src="./icons/ico-js.svg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <div class="container">
             <h1>Contacto</h1>
         </div>
     </section>
     <footer id="footer">
-        <div>
+        <div class="container">
 
         </div>
     </footer>
