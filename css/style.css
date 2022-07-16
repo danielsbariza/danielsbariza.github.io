@@ -39,6 +39,12 @@ hr {
     margin: 2rem 0;
 }
 
+/*!!!!!!!!!!!!!!!!!!!!!*/
+strong {
+    font-size: 4rem;
+    line-height: 0.3rem;
+}
+/*!!!!!!!!!!!!!!!!!!!!!*/
 
 .container {
     max-width: 120rem;
@@ -100,8 +106,8 @@ hr {
 }
 
 .desc-nombre {
-    min-width: 25rem;
-    width: 25rem;
+    min-width: 30rem;
+    width: 30rem;
 }
 
 .desc-texto {
