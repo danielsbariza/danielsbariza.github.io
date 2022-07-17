@@ -4,7 +4,7 @@
     --negro: #000000;
     --rojo: #700000;
     --azul: #009090;
-    --trans-oscuro: rgba(33, 33, 33, 0.6);
+    --trans-oscuro: rgba(33, 33, 33, 0.8);
     --trans-azul: rgba(0, 100, 100, 0.89);
     --trans-rojo: rgba(100, 0, 0, 0.75);
     --gris: #707070;
@@ -64,23 +64,27 @@ strong {
     background-color: var(--oscuro);
 }
 
-#nav-bar {
-    margin-right: 5rem;
+.header-flex {
     display: flex;
-    justify-content: center;
-    
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo-bar {
+    color: var(--blanco);
+    padding-left: 2rem;
+}
+
+.nav-selec {
+    padding: 2rem;
+    transition: background-color .5s;
+    text-decoration: none;
+    color: var(--blanco);
 }
 .nav-selec:hover {
     background-color: var(--gris);
     color: var(--negro);
-}
-.nav-selec {
-    text-align: center;
-    padding: 2rem;
-    min-width: 14rem;
-    transition: background-color .5s;
-    text-decoration: none;
-    color: var(--blanco);
 }
 
 /* ---------INICIO Y PRESENTACION-------- */
@@ -92,7 +96,7 @@ strong {
     justify-content: center;
 }
 .bg-about {
-    background: var(--trans-azul) url(../images/bg-about4.webp);
+    background: var(--trans-azul) url(../images/bg-about.webp);
     background-repeat: no-repeat;
     background-size:cover;
     background-blend-mode: darken;
@@ -103,26 +107,40 @@ strong {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    
 }
-
+.desc-profile {
+    border: var(--blanco) 2px solid;
+    border-radius: 50%;
+    max-width: 20rem;
+}
 .desc-nombre {
     min-width: 30rem;
     width: 30rem;
+    text-align: center;
+    padding-right: 2rem;
+    border-right: var(--blanco) 0.2rem solid;
 }
 
 .desc-texto {
     max-width: 45rem;
     padding-left: 2rem;
-    border-left: var(--blanco) 0.2rem solid;
 }
+
 
 /* ---------PROYECTOS-------- */
 
 #projects {
-    background-color: var(--blanco);
+    background: url(../images/bg-projects.webp);
     min-height: 100vh;
     box-shadow: 0 0 0.5rem 0.5rem;
-    padding: 8rem 2rem;
+}
+
+.bg-projects {
+    background-color: var(--blanco);
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 #projects-grid {
@@ -130,6 +148,7 @@ strong {
     justify-items: center;
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
+    padding: 5rem 5rem;
 }
 .project {
     background: var(--trans-oscuro) url(../images/img-project.webp);
