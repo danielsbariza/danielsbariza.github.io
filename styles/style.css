@@ -1,13 +1,13 @@
 :root {
     --blanco: #ffffff;
-    --oscuro: #212121;
     --negro: #000000;
-    --rojo: #700000;
+    --gris: #707070;
+    --oscuro: #212121;
     --azul: #009090;
+    --azul-oscuro: #004444;
     --trans-oscuro: rgba(33, 33, 33, 0.8);
     --trans-azul: rgba(0, 100, 100, 0.89);
-    --trans-rojo: rgba(100, 0, 0, 0.75);
-    --gris: #707070;
+    
     --fuente: 'Raleway', sans-serif
 }
 
@@ -51,9 +51,22 @@ strong {
     margin: 0 auto;
 }
 
+.buttons {
+    border: none;
+    color: var(--blanco);
+    background-color: var(--trans-oscuro);
+    padding: 1rem 3rem;
+    transition: background-color .5s;
+}
+.buttons:hover {
+    font-weight: 900;
+    background-color: var(--azul);
+}
+
 /* ---------BARRA DE NAVEGACION-------- */
 #header {
     position: fixed;
+    top: -7rem;
     background-color: var(--trans-oscuro);
     width: 100%;
     box-shadow: 0 0 0.5rem 0.5rem;
@@ -77,13 +90,12 @@ strong {
 
 .nav-selec {
     padding: 2rem;
-    transition: background-color .5s;
-    text-decoration: none;
+    font-weight: 100%;
+    transition: font-weight .5s;
     color: var(--blanco);
 }
 .nav-selec:hover {
-    background-color: var(--gris);
-    color: var(--negro);
+    font-weight: 800;
 }
 
 /* ---------INICIO Y PRESENTACION-------- */
@@ -95,10 +107,7 @@ strong {
     justify-content: center;
 }
 .bg-about {
-    background: var(--trans-azul) url(../images/bg-about.webp);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-blend-mode: darken;
+    background-color: var(--azul-oscuro);
 }
 #desc {
     color: var(--blanco);
@@ -109,31 +118,31 @@ strong {
     align-items: center;
     
 }
-.desc-profile {
-    border: var(--blanco) 2px solid;
-    border-radius: 50%;
-    max-width: 20rem;
-}
 .desc-nombre {
     min-width: 30rem;
     width: 30rem;
-    text-align: center;
+    text-align: right;
     padding-right: 2rem;
     border-right: var(--blanco) 0.2rem solid;
+}
+.desc-nombre h1 {
+    font-size: 6rem;
+    line-height: 6rem;
 }
 
 .desc-texto {
     max-width: 45rem;
     padding-left: 2rem;
+    font-style: italic;
 }
+
 
 
 /* ---------PROYECTOS-------- */
 
 #projects {
-    background: url(../images/bg-projects.webp);
     min-height: 100vh;
-    box-shadow: 0 0 0.5rem 0.5rem;
+    box-shadow: 0 0 5rem 1rem;
 }
 
 .bg-projects {
@@ -143,12 +152,11 @@ strong {
 }
 
 #projects-grid {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
     padding: 5rem 5rem;
 }
+
 .project {
     background: var(--trans-oscuro) url(../images/img-project.webp);
     background-repeat: no-repeat;
@@ -157,6 +165,16 @@ strong {
     padding: 5rem 5rem;
     margin: 1rem 1rem;
 }
+
+.project-left {
+    width: 80%;
+}
+
+.project-right {
+    align-self: flex-end;
+    width: 80%;
+}
+
 .radius-border {
     border-radius: 0.5rem;
 }
@@ -170,10 +188,7 @@ strong {
 #contact {
     position: relative;
     z-index: -1;
-    background: var(--trans-rojo) url(../images/bg-contact.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: darken;
+    background-color: var(--azul-oscuro);
     color: var(--blanco);
     height: 100vh;
 
