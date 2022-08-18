@@ -123,7 +123,7 @@ strong {
     width: 30rem;
     text-align: right;
     padding-right: 2rem;
-    border-right: var(--blanco) 0.2rem solid;
+    
 }
 .desc-nombre h1 {
     font-size: 6rem;
@@ -131,9 +131,15 @@ strong {
 }
 
 .desc-texto {
+    position: relative;
     max-width: 45rem;
     padding-left: 2rem;
     font-style: italic;
+    border-left: var(--blanco) 0.2rem solid;
+
+    /*Animate*/
+    left: 7rem;
+    opacity: 0;
 }
 
 

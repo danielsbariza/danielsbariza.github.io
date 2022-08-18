@@ -3,15 +3,20 @@ jQuery(document).ready(function($){
     
     $("#header").animate({
         "top": "0" 
-    }, timeAnimate);
+    }, timeAnimate*(3/2));
 
-    $(".desc-nombre, .desc-texto").hide();
+    $(".desc-nombre").hide();
+
 
     
-    $(".desc-nombre").fadeIn(timeAnimate, function() {
 
-        $(".desc-texto").fadeIn(timeAnimate)  
-        
+    $(".desc-nombre").fadeIn(timeAnimate/2, function() {
+
+        $(".desc-texto").animate({
+            "left": "0rem",
+            "opacity": "1",
+        },timeAnimate)
+
     })
 
     
