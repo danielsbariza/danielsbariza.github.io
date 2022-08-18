@@ -7,7 +7,7 @@ jQuery(document).ready(function($){
 
     $(".desc-nombre, .desc-texto").hide();
 
-
+    
     $(".desc-nombre").fadeIn(timeAnimate, function() {
 
         $(".desc-texto").fadeIn(timeAnimate)  
