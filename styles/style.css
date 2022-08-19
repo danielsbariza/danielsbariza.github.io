@@ -4,7 +4,7 @@
     --gris: #707070;
     --oscuro: #212121;
     --azul: #009090;
-    --azul-oscuro: #004444;
+    --azul-oscuro: #150b2d;
     --trans-oscuro: rgba(33, 33, 33, 0.8);
     --trans-azul: rgba(0, 100, 100, 0.89);
     
@@ -66,6 +66,7 @@ strong {
 /* ---------BARRA DE NAVEGACION-------- */
 #header {
     position: fixed;
+    z-index: 5;
     top: -7rem;
     background-color: var(--trans-oscuro);
     width: 100%;
@@ -84,8 +85,10 @@ strong {
 }
 
 #logo-bar {
-    color: var(--blanco);
+    margin: 1rem 0 0 0;
+    width: 7rem;
     padding-left: 2rem;
+
 }
 
 .nav-selec {
@@ -99,6 +102,14 @@ strong {
 }
 
 /* ---------INICIO Y PRESENTACION-------- */
+
+#logo {
+    position: absolute;
+    opacity: 0.4;
+    height: 95%;
+    z-index: 0;
+
+}
 
 #about {
     height: 100vh;
