@@ -1,12 +1,9 @@
 :root {
     --blanco: #ffffff;
     --negro: #000000;
-    --gris: #707070;
-    --oscuro: #212121;
-    --azul: #009090;
+    --azul: #008080;
     --azul-oscuro: #150b2d;
     --trans-oscuro: rgba(21, 11, 45, 0.7);
-    --trans-azul: rgba(0, 100, 100, 0.89);
     
     --fuente: 'Raleway', sans-serif
 }
@@ -174,7 +171,8 @@ strong {
 #projects-grid {
     display: flex;
     flex-direction: column;
-    padding: 5rem 5rem;
+    padding: 10rem 10rem;
+    
 }
 
 .project {

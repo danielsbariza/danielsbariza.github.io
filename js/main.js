@@ -1,5 +1,5 @@
 const moveForce = 40; // max popup movement in pixels
-const rotateForce = 15; // max popup rotation in deg
+// const rotateForce = 15; // max popup rotation in deg
 
 $(document).mousemove(function(e) {
 
