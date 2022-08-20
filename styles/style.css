@@ -1,9 +1,9 @@
 :root {
     --blanco: #ffffff;
     --negro: #000000;
-    --azul: #008080;
-    --azul-oscuro: #150b2d;
-    --trans-oscuro: rgba(21, 11, 45, 0.7);
+    --azul: #2f4f4f;
+    --azul-oscuro: #1f3438;
+    --trans-oscuro: rgba(31, 52, 56, 0.7);
     
     --fuente: 'Raleway', sans-serif
 }
@@ -58,7 +58,8 @@ strong {
 }
 .buttons:hover {
     font-weight: 900;
-    background-color: var(--azul);
+    color: var(--azul-oscuro);
+    background-color: var(--blanco);
 }
 
 /* ---------BARRA DE NAVEGACION-------- */
@@ -105,8 +106,13 @@ strong {
 #logo {
     position: absolute;
     opacity: 0.3;
-    height: 100%;
-
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    margin: auto;
+    height: 800px;
+    min-width: auto;
 }
 
 #about {

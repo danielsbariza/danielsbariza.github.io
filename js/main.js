@@ -1,28 +1,42 @@
-const moveForce = 40; // max popup movement in pixels
-// const rotateForce = 15; // max popup rotation in deg
+const moveForce = 75;
+const timeAnimate = 1000
 
 $(document).mousemove(function(e) {
-
+    
+    let pagex = e.pageX;
+    let pagey = e.pageY;
+    
     let docX = $(document).width();
     let docY = $(document).height();
-    
-    let moveX = (docX - e.pageX) / (docX) * -moveForce + 150;
-    let moveY = (e.pageY - docY) / (docY) * -moveForce - 30;
-    
-    // let rotateY = (e.pageX / docX * rotateForce*2) - rotateForce;
-    // let rotateX = -((e.pageY / docY * rotateForce*2) - rotateForce);
+
+    let speedupX = Math.abs((docX/2 - pagex)/(docX/2))
+    let speedupY = Math.abs((docY/2 - pagey)/(docY/2))
+
+    let moveX = (pagex - docX/2)/(docX/2) * (moveForce*speedupX);
+    let moveY = (pagey - docY/2)/(docY/2) * (moveForce*speedupY);
+
+    console.log(moveX)
 
     $('#logo')
         .css('left', moveX+'px')
         .css('top', moveY+'px')
-        // .css('transform', 'rotateY('+rotateY+'deg) rotateX('+rotateX+'deg)');
-
+    
 });
 
-
-jQuery(document).ready(function($){
+$(document).mouseleave(function(){
     
-    const timeAnimate = 1500
+    $('#logo').animate({
+        'left': '0',
+        'right': '0',
+        'top': '0',
+        'bottom': '0',
+    }, timeAnimate/2)
+        
+})
+
+$(document).ready(function(){
+    
+
     $("#header").animate({
         "top": "0" 
     }, timeAnimate);
