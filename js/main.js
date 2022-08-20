@@ -1,4 +1,4 @@
-const moveForce = 20;
+const moveForce = 40;
 const timeAnimate = 1500;
 
 $(document).ready(function(){
