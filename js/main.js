@@ -90,7 +90,7 @@ function movement(e) {
     // let speedupX = Math.abs((docX/2 - pagex)/(docX/2))
     // let speedupY = Math.abs((docY/2 - pagey)/(docY/2))
     let moveX = (pagex-docX/2)/(docX/2) * (moveForce);
-    let moveY = (pagey-docY/2)/(docY/2) * (moveForce);
+    let moveY = (pagey-docY/2)/(docY/2) * (-moveForce);
     console.log(`pagex: ${pagex}`)
     console.log(`docX: ${docX}`)
     console.log(`pagey: ${pagey}`)
