@@ -1,4 +1,5 @@
-const moveForce = 40;
+const moveForceMouse = 40;
+const moveForceScroll = 100;
 const timeAnimate = 1500;
 
 $(document).ready(function(){
@@ -89,13 +90,30 @@ function movement(e) {
 
     // let speedupX = Math.abs((docX/2 - pagex)/(docX/2))
     // let speedupY = Math.abs((docY/2 - pagey)/(docY/2))
-    let moveX = (pagex-docX/2)/(docX/2) * (moveForce);
-    let moveY = (pagey-docY/2)/(docY/2) * (-moveForce);
-    console.log(`pagex: ${pagex}`)
-    console.log(`docX: ${docX}`)
-    console.log(`pagey: ${pagey}`)
-    console.log(`docY: ${docY}`)
+    let moveX = (pagex - docX/2)/(docX/2) * (moveForceMouse);
+    let moveY = (pagey - docY/2)/(docY/2) * (-moveForceMouse);
+    
     return [moveX, moveY];
 }
 
 // --- FIN --- movimiento del logo
+
+
+// --- INICIO --- movimiento de los proyectos
+
+$(document).scroll(function(){
+    
+    let scrollY = $(document).scrollTop();
+    let docY = $(document).height();
+    let moveX = moveForceScroll - Math.abs((scrollY - docY))/(docY) *moveForceScroll;
+
+    console.log(`scrollY: ${scrollY}`)
+    console.log(`moveX: ${moveX}`)
+
+    $('.project-left')
+        .css('left',`${moveX}px`)
+
+    $('.project-right')
+        .css('right',`${moveX}px`)
+
+})
