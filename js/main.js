@@ -1,5 +1,5 @@
 const moveForceMouse = 40;
-const moveForceScroll = 100;
+const moveForceScroll = 80;
 const timeAnimate = 1500;
 const projects = [
     {
@@ -32,7 +32,7 @@ const projects = [
         bgUrl: "../images/img-project.webp",
         desciption: "Busca algunos gifs en esta pagina web!"
     },
-]
+];
 
 
 
