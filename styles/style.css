@@ -2,6 +2,7 @@
     --blanco: #ffffff;
     --negro: #000000;
     --azul: #16264b;
+    --blanco-oscuro: #f8f4f4;
     --azul-oscuro: #060c16;
     --trans-oscuro: rgba(11, 26, 53, 0.6);
     
@@ -37,6 +38,12 @@ hr {
     margin: 2rem 0;
 }
 
+.container {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
 /*!!!!!!!!!!!!!!!!!!!!!*/
 strong {
     font-size: 4rem;
@@ -63,11 +70,6 @@ strong {
     min-width: auto;
 }
 
-.container {
-    max-width: 120rem;
-    width: 90%;
-    margin: 0 auto;
-}
 
 .buttons {
     border: none;
@@ -185,12 +187,11 @@ strong {
 
 #projects {
     position: relative;
-    box-shadow: 0 0 5rem 1rem;
+    background-color: var(--blanco-oscuro);
 }
 
 .bg-projects {
-
-    background-color: var(--blanco);
+    background-color: var(--blanco-oscuro);
     background-repeat: no-repeat;
     background-size:cover;
 }
@@ -204,13 +205,10 @@ strong {
 
 .project {
     z-index: 1;
-    background: var(--trans-oscuro) url(../images/img-project.webp);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-blend-mode: darken;
     height: 30rem;
     padding: 2rem 2rem;
-    margin: 2rem 2rem;
+    margin: 2.5rem 2.5rem;
+    box-shadow: 0 0 2rem -0.3rem;
 }
 
 .project-left {
@@ -220,6 +218,7 @@ strong {
 }
 
 .project-right {
+    position: relative;
     align-self: flex-end;
     width: 80%;
 }
