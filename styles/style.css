@@ -34,9 +34,7 @@ h1,h2,h3,h4 {
 img {
     max-width: 100%;
 }
-hr {
-    margin: 2rem 0;
-}
+
 
 .container {
     max-width: 120rem;
@@ -44,12 +42,6 @@ hr {
     margin: 0 auto;
 }
 
-/*!!!!!!!!!!!!!!!!!!!!!*/
-strong {
-    font-size: 4rem;
-    line-height: 0.3rem;
-}
-/*!!!!!!!!!!!!!!!!!!!!!*/
 #loader {
     position: fixed;
     top:0;
