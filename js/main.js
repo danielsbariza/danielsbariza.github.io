@@ -1,5 +1,5 @@
-const force = 0.09
-const moveForceScroll = 80;
+const moveForceLogo = 0.09
+const moveForceScroll = 70;
 const timeAnimate = 1500;
 const projects = [
     {
@@ -108,19 +108,19 @@ function movementLogoAbout() {
 
         if (moveX < position.left && moveY < position.top){
 
-          $('.shape').css('transform',`translate(${moveX * force}px, ${moveY * force}px) rotate(5deg)`);
+          $('.shape').css('transform',`translate(${moveX * moveForceLogo}px, ${moveY * moveForceLogo}px) rotate(5deg)`);
 
         } else if (moveX < position.left && moveY > position.top) {
 
-            $('.shape').css('transform',`translate(${moveX * force}px, -${moveY * force}px) rotate(-5deg)`);
+            $('.shape').css('transform',`translate(${moveX * moveForceLogo}px, -${moveY * moveForceLogo}px) rotate(-5deg)`);
 
           } else if (moveX > position.left && moveY < position.top) {
 
-            $('.shape').css('transform',`translate(-${moveX * force}px, ${moveY * force}px) rotate(7deg)`);
+            $('.shape').css('transform',`translate(-${moveX * moveForceLogo}px, ${moveY * moveForceLogo}px) rotate(7deg)`);
 
           } else if (moveX > position.left && moveY > position.top) {
             
-            $('.shape').css('transform',`translate(-${moveX * force}px, -${moveY * force}px) rotate(-7deg)`);
+            $('.shape').css('transform',`translate(-${moveX * moveForceLogo}px, -${moveY * moveForceLogo}px) rotate(-7deg)`);
 
           }
 
