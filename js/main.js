@@ -35,7 +35,7 @@ $(document).ready(function(){
             <h2 class="project-title">${project.tittle}</h2>
             <img src="./icons/ico-html.svg" alt="html">
             <img src="./icons/ico-css.svg" alt="css">
-            <img src="./icons/ico-js.svg">
+            <img src="./icons/ico-js.svg" alt="javascript">
             <p class="project-desc">${project.desciption}</p>
         </div>
         `;
