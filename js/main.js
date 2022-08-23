@@ -1,4 +1,4 @@
-const moveForceMouse = 40;
+const force = 0.09
 const moveForceScroll = 80;
 const timeAnimate = 1500;
 const projects = [
@@ -99,55 +99,34 @@ $(document).ready(function(){
 // --- INICIO --- movimiento del logo
 function movementLogoAbout() {
 
-    $(document).mouseenter(function(e){
+    $(document).mousemove(function(e){
+        
+        let moveX = e.pageX;
+        let moveY = e.pageY;
+        
+        const position = $('.shape').position();
 
-        let [moveX, moveY] = movement(e);
-    
-        $('#logo').animate({
-            'left': `${moveX}px`,
-            'top': `${moveY}px`,
-        }, 150)
-    })
-    
-    $(document).mousemove(function(e) {
-        
-        let [moveX, moveY] = movement(e);
-        
-        setTimeout(function(){
-            $('#logo')
-                .css('left',`${moveX}px`)
-                .css('top', `${moveY}px`)
-        }, 300)
-    
-    });
-    
-    $(document).mouseleave(function(){
-    
-        $('#logo').animate({
-            'left': '0',
-            'top': '0',
-            'right': '0',
-            'bottom': '0',
-        }, 300)
-    
+        if (moveX < position.left && moveY < position.top){
+
+          $('.shape').css('transform',`translate(${moveX * force}px, ${moveY * force}px) rotate(5deg)`);
+
+        } else if (moveX < position.left && moveY > position.top) {
+
+            $('.shape').css('transform',`translate(${moveX * force}px, -${moveY * force}px) rotate(-5deg)`);
+
+          } else if (moveX > position.left && moveY < position.top) {
+
+            $('.shape').css('transform',`translate(-${moveX * force}px, ${moveY * force}px) rotate(7deg)`);
+
+          } else if (moveX > position.left && moveY > position.top) {
+            
+            $('.shape').css('transform',`translate(-${moveX * force}px, -${moveY * force}px) rotate(-7deg)`);
+
+          }
+
     })
 }
 
-
-function movement(e) {
-    let pagex = e.pageX;
-    let pagey = e.pageY;
-
-    let docX = $(window).width();
-    let docY = $(window).height();
-
-    // let speedupX = Math.abs((docX/2 - pagex)/(docX/2))
-    // let speedupY = Math.abs((docY/2 - pagey)/(docY/2))
-    let moveX = (pagex - docX/2)/(docX/2) * (moveForceMouse);
-    let moveY = (pagey - docY/2)/(docY/2) * (moveForceMouse);
-    
-    return [moveX, moveY];
-}
 
 // --- FIN --- movimiento del logo
 

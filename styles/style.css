@@ -126,25 +126,31 @@ strong {
 /* ---------INICIO Y PRESENTACION-------- */
 
 #about {
+    position: relative;
+    display: grid;
+    place-items: center;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: auto;
 }
+
 .bg-about {
     background-color: var(--azul-oscuro);
 }
 
-#logo {
-    position: absolute;
-    opacity: 0.2;
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0;
-    margin: auto;
-    height: var(--height-logo);
-    min-width: auto;
+.shape {
+    position: fixed;
+    transition: transform linear;
+    top: 0;
+    right:0;
+    height: 1000px;
+    width: 1000px;
+    transition-duration: 400ms;
+}
+
+#logo-responsive {
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
 }
 
 #desc {
@@ -180,7 +186,6 @@ strong {
     left: 7rem;
     opacity: 0;
 }
-
 
 
 /* ---------PROYECTOS-------- */
