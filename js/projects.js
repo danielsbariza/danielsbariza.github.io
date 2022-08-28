@@ -23,7 +23,7 @@ export const projects = [
     {
         tittle: "Dimensionamiento de microrredes aisladas a partir de técnicas de regresión de aprendizaje automático",
         bgUrl: "../images/img-PdG.webp",
-        url: "https://github.com",
+        url: "https://github.com/danielsbariza/TesisDeGrado",
         desciption: "En este proyecto se propone una metodología alternativa para el dimensionamiento de microrredes aisladas para condiciones climáticas y de carga especificas utilizando técnicas de regresión de aprendizaje automático.<br>Se busca evaluar su desempeño con respecto a la formulación clásica y proponer un procedimiento para evaluar la relación entre la precisión de los modelos y la proporción de los datos usados.",
         language: [
             languages.python,
