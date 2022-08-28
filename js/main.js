@@ -28,15 +28,18 @@ $(document).ready(function(){
         <div style="
             background: var(--trans-oscuro) url(${project.bgUrl});
             background-repeat: no-repeat;
+            background-position: center center;
             background-size:cover;
             background-blend-mode: darken;
         "
         class="project ${directionProject}">
             <h2 class="project-title">${project.tittle}</h2>
-            <img src="./icons/ico-html.svg" alt="html">
-            <img src="./icons/ico-css.svg" alt="css">
-            <img src="./icons/ico-js.svg" alt="javascript">
+            ${
+                project.language.map(value => value
+            )}
             <p class="project-desc">${project.desciption}</p>
+            <form action="${project.url}">
+            <a href="${project.url}" target="_blank" class="buttons">Ir a la web</a>
         </div>
         `;
         $('#projects-grid').append($.parseHTML(strProject))
