@@ -21,6 +21,12 @@ $(document).ready(function(){
         });
     },1000)
     
+    // $('#open-popup').on('click', function(){
+    //     $('.popup').fadeIn();
+    // });
+
+
+
     projects.map((project,index) => {
         let directionProject = (index%2==0) ? "project-left" : "project-right";
         
