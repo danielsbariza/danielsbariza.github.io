@@ -248,7 +248,7 @@ img {
 
 .popup-close {
     position: absolute;
-    background-color: white;
+    background-color: var(--blanco-oscuro);
     right: 2rem;
     width: 3rem;
     height: 3rem;
