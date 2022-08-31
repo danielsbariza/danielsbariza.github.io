@@ -21,9 +21,14 @@ $(document).ready(function(){
         });
     },1000)
     
-    // $('#open-popup').on('click', function(){
-    //     $('.popup').fadeIn();
-    // });
+    $(".popup-open").on("click", function(){
+        $(".popup, .popup-bg").fadeIn("slow",function(){
+            
+            $(".popup-close").on("click", function(){
+                $(".popup, .popup-bg").fadeOut("slow");
+            })
+        });
+    })
 
 
 
