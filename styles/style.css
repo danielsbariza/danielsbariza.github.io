@@ -9,7 +9,6 @@
     --fuente: 'Raleway', sans-serif;
     --height-logo: 30rem;
 }
-
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -34,14 +33,11 @@ h1,h2,h3,h4 {
 img {
     max-width: 100%;
 }
-
-
 .container {
     max-width: 120rem;
     width: 90%;
     margin: 0 auto;
 }
-
 #loader {
     position: fixed;
     top:0;
@@ -61,8 +57,6 @@ img {
     height: var(--height-logo);
     min-width: auto;
 }
-
-
 .buttons {
     border: none;
     color: var(--blanco);
@@ -90,21 +84,18 @@ img {
 #header:hover {
     background-color: var(--azul);
 }
-
 .header-flex {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-
 #logo-bar {
     margin: 1rem 0 0 0;
     width: 7rem;
     padding-left: 2rem;
 
 }
-
 .nav-selec {
     padding: 2rem;
     font-weight: 100%;
@@ -124,11 +115,9 @@ img {
     height: 100vh;
     margin: auto;
 }
-
 .bg-about {
     background-color: var(--azul-oscuro);
 }
-
 .shape {
     position: fixed;
     transition: transform linear;
@@ -138,13 +127,11 @@ img {
     width: 1000px;
     transition-duration: 400ms;
 }
-
 #logo-responsive {
     opacity: 0.3;
     height: 100%;
     width: 100%;
 }
-
 #desc {
     color: var(--blanco);
     margin: 0 3rem;
@@ -165,20 +152,16 @@ img {
     font-size: 6rem;
     line-height: 6rem;
 }
-
 .desc-texto {
     position: relative;
     width: 30rem;
     padding-left: 3rem;
     font-style: italic;
     height: 15rem;
-    
-
     /*Animate*/
     left: 7rem;
     opacity: 0;
 }
-
 
 /* ---------PROYECTOS-------- */
 
@@ -186,13 +169,11 @@ img {
     position: relative;
     background-color: var(--blanco-oscuro);
 }
-
 .bg-projects {
     background-color: var(--blanco-oscuro);
     background-repeat: no-repeat;
     background-size:cover;
 }
-
 #projects-grid {
     display: flex;
     flex-direction: column;
@@ -203,26 +184,22 @@ img {
     text-align: center;
     color: var(--azul);
 }
-
 .project {
     height: auto;
     padding: 5rem 5rem;
     margin: 2.5rem 2.5rem;
     box-shadow: 0 0 2rem -0.3rem;
 }
-
 .project-left {
     position: relative;
     align-self: flex-start;
     width: 80%;
 }
-
 .project-right {
     position: relative;
     align-self: flex-end;
     width: 80%;
 }
-
 .project-title {
     color: var(--blanco);
 }
@@ -231,25 +208,39 @@ img {
     text-align: justify;
 }
 /* ---------PROYECTOS-------- */
+
+
+/* ---------CONTACTO-------- */
 #contact {
     position: relative;
     z-index: -1;
     background-color: var(--azul-oscuro);
     color: var(--blanco);
     height: 100vh;
-
     display: flex;
     align-items: center;
-    justify-content: center;
-   
+    justify-content: center; 
 }
+.contact-dates {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: var(--blanco);
+}
+.contact-dates h3{
+    margin-left: 1rem;
+}
+/* ---------CONTACTO-------- */
 
-/* POPUP */
+
+/* ---------POPUP-------- */
 
 .popup-close {
     position: absolute;
     background-color: var(--blanco-oscuro);
-    right: 2rem;
+    right: 3rem;
     width: 3rem;
     height: 3rem;
 
@@ -273,8 +264,6 @@ img {
     height: 10px;
     transform: rotate(45deg);
 }
-
-
 .popup-bg {
     position: fixed;
     z-index: 998;
@@ -300,11 +289,11 @@ img {
     margin: auto;
     position: relative;
     z-index: 1000;
-    background-color: white;
+    background-color: var(--blanco-oscuro);
     width: 60rem;
-    padding: 2rem;
+    padding: 3rem;
     box-shadow: 0 0 1rem 0.1rem;
 }
-.popup-content span{
-    color: #bababa;
+.popup-content p{
+    text-align: justify;
 }
