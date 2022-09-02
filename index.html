@@ -42,13 +42,14 @@
         </div>
     </header>
     
-<!-- ACERCA DE MI -->
+<!-- LOGO EN MOVIMIENTO -->
 
+    <div class="shape">
+        <img src="/images/Logo.png" alt="logo" id="logo-responsive">
+    </div>
+
+    <!-- ACERCA DE MI -->
     <section id="about" class="bg-about">
-
-        <div class="shape">
-            <img src="/images/Logo.png" alt="logo" id="logo-responsive">
-        </div>
 
         <div class="container bg-transparency">
             
@@ -84,24 +85,28 @@
     </section>
 
 <!-- CONTACTO -->
+
     <section id="contact">
         <div class="container">
             <h1>Contacto</h1>
-            <a class="contact-dates" href="https://www.linkedin.com/in/danielsbariza/">
-                <img src="./icons/ico-linkedin.svg" alt="linkedin">
-                <h3>danielsbariza</h3>
-            </a>
-                
-            <a class="contact-dates" href="mailto:daniel_sbarrera@hotmail.com">
-                <img src="./icons/ico-email.svg" alt="email">
-                <h3>daniel_sbarrera@hotmail.com</h3>
-            </a>
+            <div class="contacts">
 
-            <div class="contact-dates">
-                <img src="./icons/ico-phone.svg" alt="phone">
-                <h3>+57 3132036218</h3>
-            </div>
-                
+                <a target=_blank class="contact-dates" href="https://www.linkedin.com/in/danielsbariza/">
+                    <img src="./icons/ico-linkedin.svg" alt="linkedin">
+                    <h3>danielsbariza</h3>
+                </a>
+                    
+                <a class="contact-dates" href="mailto:daniel_sbarrera@hotmail.com">
+                    <img src="./icons/ico-email.svg" alt="email">
+                    <h3>daniel_sbarrera@hotmail.com</h3>
+                </a>
+    
+                <div class="contact-dates">
+                    <img src="./icons/ico-phone.svg" alt="phone">
+                    <h3>+57 3132036218</h3>
+                </div>
+
+            </div>       
         </div>
     </section>
     <footer id="footer">
@@ -109,8 +114,6 @@
 
         </div>
     </footer>
-    <script src="js/jquery-3.6.0.min.js" async></script>
-    <script type="module" src="js/main.js"></script>
 
 <!-- POPUP -->
 
@@ -127,5 +130,9 @@
             </div>
         </div>
     <div class="popup-bg"></div>
+
+    <script src="js/jquery-3.6.0.min.js" async></script>
+
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
