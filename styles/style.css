@@ -144,6 +144,13 @@ img {
     height: 100%;
     width: 100%;
 }
+@media (max-width: 768px) {
+    .shape {
+        width: 100%;
+        height: auto;
+        top: 25vh;
+    }
+}
 #desc {
     position: relative;
     z-index: 2;

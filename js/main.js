@@ -80,33 +80,37 @@ $(document).ready(function(){
 
 // --- INICIO --- movimiento del logo
 function movementLogoAbout() {
+    if($(window).width() > 768){
 
-    $(document).mousemove(function(e){
+        $(document).mousemove(function(e){
         
-        let moveX = e.pageX;
-        let moveY = e.pageY;
-        
-        const position = $('.shape').position();
-
-        if (moveX < position.left && moveY < position.top){
-
-          $('.shape').css('transform',`translate(${moveX * moveForceLogo}px, ${moveY * moveForceLogo}px) rotate(5deg)`);
-
-        } else if (moveX < position.left && moveY > position.top) {
-
-            $('.shape').css('transform',`translate(${moveX * moveForceLogo}px, -${moveY * moveForceLogo}px) rotate(-5deg)`);
-
-          } else if (moveX > position.left && moveY < position.top) {
-
-            $('.shape').css('transform',`translate(-${moveX * moveForceLogo}px, ${moveY * moveForceLogo}px) rotate(7deg)`);
-
-          } else if (moveX > position.left && moveY > position.top) {
+            let moveX = e.pageX;
+            let moveY = e.pageY;
             
-            $('.shape').css('transform',`translate(-${moveX * moveForceLogo}px, -${moveY * moveForceLogo}px) rotate(-7deg)`);
+            const position = $('.shape').position();
+    
+            if (moveX < position.left && moveY < position.top){
+    
+              $('.shape').css('transform',`translate(${moveX * moveForceLogo}px, ${moveY * moveForceLogo}px) rotate(5deg)`);
+    
+            } else if (moveX < position.left && moveY > position.top) {
+    
+                $('.shape').css('transform',`translate(${moveX * moveForceLogo}px, -${moveY * moveForceLogo}px) rotate(-5deg)`);
+    
+              } else if (moveX > position.left && moveY < position.top) {
+    
+                $('.shape').css('transform',`translate(-${moveX * moveForceLogo}px, ${moveY * moveForceLogo}px) rotate(7deg)`);
+    
+              } else if (moveX > position.left && moveY > position.top) {
+                
+                $('.shape').css('transform',`translate(-${moveX * moveForceLogo}px, -${moveY * moveForceLogo}px) rotate(-7deg)`);
+    
+              }
+    
+        })
 
-          }
-
-    })
+    }
+    
 }
 // --- FIN --- movimiento del logo
 
@@ -115,7 +119,7 @@ function movementLogoAbout() {
 
 $(document).scroll(function(){
     if ($(window).width() > 768){
-        
+
         let scrollY = $(document).scrollTop();
         let docY = $(document).height();
         let moveX = moveForceScroll - Math.abs((scrollY - docY))/(docY) *moveForceScroll;
