@@ -114,16 +114,19 @@ function movementLogoAbout() {
 // --- INICIO --- movimiento de los proyectos
 
 $(document).scroll(function(){
-    
-    let scrollY = $(document).scrollTop();
-    let docY = $(document).height();
-    let moveX = moveForceScroll - Math.abs((scrollY - docY))/(docY) *moveForceScroll;
+    if ($(window).width() > 768){
+        
+        let scrollY = $(document).scrollTop();
+        let docY = $(document).height();
+        let moveX = moveForceScroll - Math.abs((scrollY - docY))/(docY) *moveForceScroll;
 
-    $('.project-left')
+        $('.project-left')
         .css('left',`${moveX}px`)
 
-    $('.project-right')
+        $('.project-right')
         .css('right',`${moveX}px`)
+    }
+    
 })
 
 // --- FIN --- movimiento de los proyectos
