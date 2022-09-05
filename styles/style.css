@@ -33,6 +33,9 @@ h1,h2,h3,h4 {
 img {
     max-width: 100%;
 }
+p {
+    line-height: 2.5rem;
+}
 .container {
     max-width: 120rem;
     width: 90%;
@@ -347,5 +350,4 @@ img {
 }
 .popup-content p{
     text-align: justify;
-    line-height: 2.5rem;
 }
